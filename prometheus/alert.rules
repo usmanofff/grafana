@@ -57,7 +57,7 @@ groups:
           description: "SSL certificate expires in 30 days"
       
       - alert: Prometheus has restarted 
-        expr: (time() - node_boot_time_seconds) < 180
+        expr: (time() - node_boot_time_seconds) < 500
         for: 0m
         labels:
           severity: critical
